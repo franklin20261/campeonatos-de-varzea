@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#123b27">
+
+    <title>{% block title %}CAMPEONATOS DE VÁRZEA{% endblock %}</title>
+
+    <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+<header>
+    <a class="brand" href="{{ url_for('index') }}">🏆 CAMPEONATOS DE VÁRZEA</a>
+
+    <nav class="nav">
+        <a href="{{ url_for('index') }}">Início</a>
+        {% if user %}
+            <a href="{{ url_for('dashboard') }}">Meu painel</a>
+            <a href="{{ url_for('logout') }}">Sair ({{ user.name }})</a>
+        {% else %}
+            <a href="{{ url_for('login') }}">Entrar</a>
+            <a href="{{ url_for('register') }}">Criar conta</a>
+        {% endif %}
+    </nav>
+</header>
+
+<main>
+    {% with messages=get_flashed_messages(with_categories=true) %}
+        {% for category,message in messages %}
+            <div class="flash {{category}}">{{message}}</div>
+        {% endfor %}
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+</main>
+
+<footer>
+    CAMPEONATOS DE VÁRZEA · Futebol da nossa região em um só lugar
+</footer>
+
+<script>
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function() {
+        navigator.serviceWorker.register("/service-worker.js")
+            .catch(function(error) {
+                console.error("Erro ao instalar modo offline:", error);
+            });
+    });
+}
+</script>
+
+</body>
+</html>

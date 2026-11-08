@@ -1,0 +1,35 @@
+CAMPEONATOS DE VÁRZEA - VERSÃO INICIAL
+======================================
+
+REQUISITOS
+- Python 3.10 ou superior
+- Windows, Linux ou macOS
+
+INSTALAÇÃO NO WINDOWS
+1. Extraia a pasta CAMPEONATOS_DE_VARZEA.
+2. Abra o CMD dentro da pasta.
+3. Crie e ative um ambiente virtual:
+   python -m venv .venv
+   .venv\Scripts\activate
+4. Instale:
+   python -m pip install -r requirements.txt
+5. Inicie:
+   python app.py
+6. Acesse no navegador:
+   http://127.0.0.1:5000
+
+CONTA ADMINISTRADORA INICIAL
+E-mail: admin@varzea.local
+Senha: Admin@12345
+
+IMPORTANTE:
+- Entre como administrador e crie organizadores pela tela de cadastro; por segurança,
+  o cadastro público permite apenas contas de técnico ou organizador. Para uso real,
+  não divulgue a conta inicial e altere a senha administrativa antes de publicar.
+- O banco SQLite (campeonatos.db) é criado automaticamente.
+- Fotos e documentos ficam na pasta uploads.
+- Esta é uma versão inicial para testes locais. Antes de publicar na internet,
+  configure SECRET_KEY forte, HTTPS, backups, política de privacidade, consentimento
+  para tratamento de dados de atletas e controles adicionais de acesso aos documentos.
+- Documentos enviados são restritos às contas autorizadas na tela de equipe; revise
+  cuidadosamente permissões e proteção antes de uso com dados reais.

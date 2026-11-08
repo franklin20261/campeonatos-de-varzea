@@ -1,0 +1,9 @@
+ATUALIZAÇÃO DA ARTILHARIA - CAMPEONATOS DE VÁRZEA
+
+1. Faça uma cópia de segurança do app.py atual.
+2. Copie o app.py deste pacote para a pasta principal do projeto, substituindo o antigo.
+3. Copie templates/championship.html para a pasta templates do projeto, substituindo o antigo.
+4. NÃO apague nem substitua campeonatos.db.
+5. Reinicie o servidor com python app.py.
+
+O pacote contém somente app.py e templates/championship.html; não contém banco de dados.

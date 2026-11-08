@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+campeonatos.db
+instance/
+uploads/
+app_backup*.py
