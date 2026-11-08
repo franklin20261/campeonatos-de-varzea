@@ -7,3 +7,4 @@ campeonatos.db
 instance/
 uploads/
 app_backup*.py
+app_antigo.py
